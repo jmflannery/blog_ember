@@ -5,17 +5,7 @@
 {{/link-to}}
 <div class='posts'>
   {{#each model as |post|}}
-    <div class="post">
-      <h4>{{post.title}}</h4>
-      {{#link-to 'admin.posts.post' post}}
-        View
-      {{/link-to}}
-      {{#link-to 'admin.posts.edit' post}}
-        Edit
-      {{/link-to}}
-      <a href='#' {{action 'deletePost' post}}>Delete</a>
-      <p>{{post.content}}</p>
-    </div>
+    {{#post-listing post=post admin='true'}}{{/post-listing}}
   {{/each}}
 </div>
 

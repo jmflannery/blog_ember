@@ -1,0 +1,14 @@
+<div class="post-listing">
+  <h4>{{post.title}}</h4>
+  {{#if admin}}
+    {{#link-to 'admin.posts.post' post}}
+      View
+    {{/link-to}}
+    {{#link-to 'admin.posts.edit' post}}
+      Edit
+    {{/link-to}}
+    <a href='#' {{action 'deletePost' post}}>Delete</a>
+  {{/if}}
+  <p>{{post.content}}</p>
+</div>
+{{yield}}

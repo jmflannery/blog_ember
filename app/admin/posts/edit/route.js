@@ -8,13 +8,13 @@ export default Ember.Route.extend({
   actions: {
     save: function(post) {
       post.save().then(() => {
-        this.transitionTo('posts');
+        this.transitionTo('admin.posts');
       });
     },
 
     cancel: function(post) {
       post.rollbackAttributes();
-      this.transitionTo('posts');
+      this.transitionTo('admin.posts');
     }
   }
 });

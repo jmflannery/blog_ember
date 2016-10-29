@@ -1,11 +1,9 @@
-<h2>My Posts here:</h2>
-
 {{#link-to 'admin.posts.new' class="button"}}
   New Post
 {{/link-to}}
-<div class='posts'>
+<div class='post-listings'>
   {{#each model as |post|}}
-    {{#post-listing post=post admin='true'}}{{/post-listing}}
+    {{#post-listing model=post admin='true'}}{{/post-listing}}
   {{/each}}
 </div>
 

@@ -1,0 +1,8 @@
+<div>
+  title: {{input value=model.title}}
+</div>
+<div>
+  content: {{textarea value=model.content}}
+</div>
+<button {{action 'save' model}}>Save</button>
+<button {{action 'cancel' model}}>Cancel</button>

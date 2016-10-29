@@ -1,0 +1,22 @@
+<h2>My Posts here:</h2>
+
+{{#link-to 'posts.new' class="button"}}
+  New Post
+{{/link-to}}
+<div class='posts'>
+  {{#each model as |post|}}
+    <div class="post">
+      <h4>{{post.title}}</h4>
+      {{#link-to 'posts.post' post}}
+        View
+      {{/link-to}}
+      {{#link-to 'posts.edit' post}}
+        Edit
+      {{/link-to}}
+      <a href='#' {{action 'deletePost' post}}>Delete</a>
+      <p>{{post.content}}</p>
+    </div>
+  {{/each}}
+</div>
+
+{{outlet}}

@@ -1,0 +1,9 @@
+{{#link-to 'posts.index'}}
+  All Posts
+{{/link-to}}
+{{#link-to 'posts.edit' model}}
+  Edit
+{{/link-to}}
+<a href='#' {{action 'deletePost' model}}>Delete</a>
+<h1>{{model.title}}</h1>
+<p>{{model.content}}</p>

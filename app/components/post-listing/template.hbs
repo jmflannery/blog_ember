@@ -2,7 +2,6 @@
   {{#if admin}}
     {{#link-to 'admin.posts.post' model}}
       <h2>{{model.title}}</h2>
-      <p>{{model.content}}</p>
     {{/link-to}}
     {{#link-to 'admin.posts.edit' model}}
       Edit
@@ -11,8 +10,6 @@
   {{else}}
     {{#link-to 'posts.post' model}}
       <h2>{{model.title}}</h2>
-      <p>{{model.content}}</p>
     {{/link-to}}
   {{/if}}
 </div>
-{{yield}}

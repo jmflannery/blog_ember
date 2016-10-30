@@ -1,8 +1,12 @@
-<div>
-  title: {{input value=model.title}}
+<div class="edit-post">
+  <div class="input">
+    <label>title:</label>
+    {{input value=model.title placeholder="title here..."}}
+  </div>
+  <div class="input">
+    <label>content:</label>
+    {{textarea value=model.content placeholder="Article markdown goes here..." rows="600" cols="1000" wrap="off"}}
+  </div>
+  <button {{action 'save' model}}>Save</button>
+  <button {{action 'cancel' model}}>Cancel</button>
 </div>
-<div>
-  content: {{textarea value=model.content}}
-</div>
-<button {{action 'save' model}}>Save</button>
-<button {{action 'cancel' model}}>Cancel</button>

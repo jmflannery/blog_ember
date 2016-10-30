@@ -50,6 +50,12 @@ button {
   border-radius: 6px;
 }
 
+article {
+  width: 92%;
+  margin: 48px auto;
+  text-align: left;
+}
+
 .page {
 }
 
@@ -61,7 +67,16 @@ button {
   margin: 48px 0 0 0;
 }
 
-.new-post {
+.post-content {
+  h1, h2, h3, h4, h5, h6 {
+    margin: 6px 0 18px 0;
+  }
+  p {
+    margin: 16px 0;
+  }
+}
+
+.new-post, .edit-post {
   width: 92%;
   margin: 0 auto;
   text-align: left;

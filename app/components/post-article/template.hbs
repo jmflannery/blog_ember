@@ -1,5 +1,6 @@
-<div class="post-article">
-  <h1>{{model.title}}</h1>
-  <p>{{model.content}}</p>
-</div>
-{{yield}}
+<article>
+  <h2>{{model.title}}</h2>
+  <div class="post-content">
+    {{markdown-to-html model.content}}
+  </div>
+</article>

@@ -52,14 +52,20 @@ button {
 
 article {
   width: 92%;
-  margin: 48px auto;
+  margin: 24px auto;
   text-align: left;
-  h2 {
-    text-align: center;
-  }
 }
 
 .page {
+}
+
+.icon {
+  font-family: 'fontello';
+}
+
+.feather {
+  color: #278912;
+  margin: 8px;
 }
 
 .input {
@@ -68,6 +74,17 @@ article {
 
 .post-listings {
   margin: 48px 0 0 0;
+}
+
+.post-header {
+  text-align: center;
+  margin: 0 0 24px 0;
+
+  h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 18px 0;
+  }
 }
 
 .post-content {

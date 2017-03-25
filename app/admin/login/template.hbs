@@ -1,0 +1,10 @@
+<h1>Log In</h1>
+<div>
+  <label for='email'>email:</label>
+  {{input value=model.email id='email'}}
+</div>
+<div>
+  <label for='password'>password:</label>
+  {{input value=model.password id='password'}}
+</div>
+<button {{action 'login' model}}>Log In</button>

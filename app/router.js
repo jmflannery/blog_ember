@@ -11,6 +11,7 @@ Router.map(function() {
     this.route('post', { path: ':post_id' });
   });
   this.route('admin', function() {
+    this.route('login');
     this.route('posts', function() {
       this.route('new');
       this.route('post', { path: ':post_id' });

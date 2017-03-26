@@ -22,17 +22,18 @@ export default DS.RESTAdapter.extend({
     return this._super(params);
   },
 
-  headers: Ember.computed('session.email', 'session.password', 'session.token', function() {
-    let headers = {}, token;
+  headersForRequest(params) {
+    let headers = this._super(params) || {};
+    let token, email, password;
 
     if (token = this.get('session.token')) {
       headers.Authorization = `Bearer ${token}`;
-    } else if (this.get('session.email') && this.get('session.password')) {
-      headers.Authorization = "Basic " + btoa(`${this.get('session.email')}:${this.get('session.password')}`)
+    } else if ((email = this.get('session.email')) && (password = this.get('session.password'))) {
+      headers.Authorization = "Basic " + btoa(`${email}:${password}`)
     }
 
     return headers;
-  }),
+  },
 
   handleResponse(status, headers, payload, requestData) {
     if (status === 201 || status == 200) {

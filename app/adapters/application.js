@@ -13,5 +13,5 @@ export default DS.RESTAdapter.extend({
     }
 
     return headers;
-  })
+  }
 });

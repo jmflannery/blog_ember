@@ -8,7 +8,7 @@ export default Ember.Route.extend({
     if (token) {
       this.get('session').set('token', token);
       this.get('store').createRecord('account').save()
-        .catch(error => localStorage.removeItem('token');
+        .catch(error => localStorage.removeItem('token'));
     }
   }
 });

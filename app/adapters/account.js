@@ -5,12 +5,18 @@ export default DS.RESTAdapter.extend({
 
   host: 'http://localhost:3000',
 
-  pathForType: function(type) {
-    return 'login';
+  urlForRequest(params) {
+    let url = this._super(params);
+    if (params.requestType === 'createRecord') {
+      url = `${this.host}/login`;
+    } else if (params.requestType === 'deleteRecord') {
+      url = `${this.host}/logout`;
+    }
+    return url;
   },
 
   methodForRequest(params) {
-    if (this.get('session').get('token')) {
+    if (params.requestType == 'createRecord' && this.get('session').get('token')) {
       return 'PUT';
     }
     return this._super(params);
@@ -29,7 +35,7 @@ export default DS.RESTAdapter.extend({
   }),
 
   handleResponse(status, headers, payload, requestData) {
-    if (status === 201) {
+    if (status === 201 || status == 200) {
       let token = headers.Authorization.split(' ')[1];
       localStorage.setItem('token', token);
       this.get('session').set('token', token);

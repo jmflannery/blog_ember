@@ -1,15 +1,15 @@
 <div class="post-listing">
   {{#if admin}}
-    {{#link-to 'admin.posts.post' model}}
-      <h2>{{model.title}}</h2>
+    {{#link-to 'admin.posts.post' post}}
+      <h2>{{post.title}}</h2>
     {{/link-to}}
-    {{#link-to 'admin.posts.edit' model}}
+    {{#link-to 'admin.posts.edit' post}}
       Edit
     {{/link-to}}
-    <a href='#' {{action 'deletePost' model}}>Delete</a>
+    <a href='#' {{action 'deletePost' post}}>Delete</a>
   {{else}}
-    {{#link-to 'posts.post' model}}
-      <h2>{{model.title}}</h2>
+    {{#link-to 'posts.post' post}}
+      <h2>{{post.title}}</h2>
     {{/link-to}}
   {{/if}}
 </div>

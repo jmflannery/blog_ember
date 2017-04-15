@@ -7,7 +7,11 @@
       Edit
     {{/link-to}} |
     <a href='#' {{action 'deletePost' post}}>Delete</a> |
-    <a href='#' {{action 'publishPost' post}}>Publish</a>
+    {{#if post.published_at}}
+      <a href='#' {{action 'unpublishPost' post}}>Unpublish</a>
+    {{else}}
+      <a href='#' {{action 'publishPost' post}}>Publish</a>
+    {{/if}}
   {{else}}
     {{#link-to 'posts.post' post}}
       <h2>{{post.title}}</h2>

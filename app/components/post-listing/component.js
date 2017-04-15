@@ -8,6 +8,12 @@ export default Ember.Component.extend({
       post.save();
     },
 
+    unpublishPost() {
+      let post = this.get('post')
+      post.set('published_at', '');
+      post.save();
+    },
+
     deletePost() {
       this.get('post').destroyRecord();
     }

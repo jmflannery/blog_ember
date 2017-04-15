@@ -3,12 +3,14 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   session: Ember.inject.service(),
 
-  activate() {
-    let token = localStorage.getItem('token');
+  beforeModel() {
+    let token = localStorage.getItem('apiToken');
     if (token) {
-      this.get('session').set('token', token);
+      this.get('session').setToken(token);
       this.get('store').createRecord('account').save()
         .catch(error => localStorage.removeItem('token'));
+    } else {
+      this.transitionTo('posts');
     }
   }
 });

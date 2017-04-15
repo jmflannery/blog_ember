@@ -38,9 +38,8 @@ export default DS.RESTAdapter.extend({
   handleResponse(status, headers, payload, requestData) {
     if (status === 201 || status == 200) {
       let token = headers.Authorization.split(' ')[1];
-      localStorage.setItem('token', token);
-      this.get('session').set('token', token);
-      this.get('session').set('currentAccountId', payload['toker/user'].id);
+      localStorage.setItem('apiToken', token);
+      this.get('session').login(token, payload['toker/user'].id);
     }
     return this._super(status, headers, payload, requestData);
   }

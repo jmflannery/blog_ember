@@ -5,13 +5,11 @@ export default DS.RESTAdapter.extend({
 
   host: 'http://localhost:3000',
 
-  headers() {
-    let headers = {}, token;
-
-    if (token = this.get('session').get('token')) {
-      headers.Authorization = `Bearer ${token}`;
+  headersForRequest(params) {
+    let headers = this._super(params) || {};
+    if (this.get('session').isLoggedIn()) {
+      headers.Authorization = `Bearer ${this.get('session').apiToken()}`;
     }
-
     return headers;
   }
 });

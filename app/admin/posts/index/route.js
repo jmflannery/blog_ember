@@ -1,8 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  session: Ember.inject.service(),
+
   model: function() {
-    return this.store.findAll('post');
+    return {
+      posts: this.store.findAll('post'),
+      isLoggedIn: this.get('session').isLoggedIn()
+    }
   },
 
   actions: {

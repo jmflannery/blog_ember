@@ -2,8 +2,8 @@
   New Post
 {{/link-to}}
 <div class='post-listings'>
-  {{#each model as |post|}}
-    {{#post-listing post=post admin='true'}}{{/post-listing}}
+  {{#each model.posts as |post|}}
+    {{#post-listing post=post admin=model.isLoggedIn}}{{/post-listing}}
   {{/each}}
 </div>
 

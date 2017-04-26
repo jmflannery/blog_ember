@@ -15,9 +15,8 @@ export default Ember.Route.extend({
       let { email, password } = creds;
       this.get('session').set('email', email);
       this.get('session').set('password', password);
-      this.get('store').createRecord('account').save().then((account) => {
-        this.transitionTo('admin.posts');
-      });
+      this.get('store').createRecord('account').save()
+        .then(() => this.transitionTo('admin.posts'));
     }
   }
 });

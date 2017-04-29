@@ -1,1 +1,9 @@
-{{outlet}}
+<div class='post-listings'>
+  {{#each model.posts as |post|}}
+    {{#post-listing post=post}}{{/post-listing}}
+  {{/each}}
+</div>
+
+<div>
+  {{outlet}}
+</div>

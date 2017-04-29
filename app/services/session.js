@@ -26,9 +26,9 @@ export default Ember.Service.extend({
   },
 
   currentAccount() {
-    if (!this.isLoggedIn()) return null;
+    if (!this.isLoggedIn()) { return null; }
     let accountId = this.get('currentAccountId');
-    if (!accountId) return null;
+    if (!accountId) { return null; }
     return this.get('store').peekRecord('account', accountId);
   }
 });

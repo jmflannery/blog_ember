@@ -1,4 +1,6 @@
 import Ember from 'ember';
+import moment from 'moment';
+import hljs from 'hljs';
 
 export default Ember.Component.extend({
   tagName: 'article',

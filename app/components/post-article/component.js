@@ -4,7 +4,7 @@ export default Ember.Component.extend({
   tagName: 'article',
 
   didReceiveAttrs: function() {
-    this.set('created_at_formatted', moment(this.get('created_at')).format("MMMM Do YYYY"));
+    this.set('created_at_formatted', moment(this.get('created_at')).format("YYYY MMMM D"));
   },
 
   didRender: function() {

@@ -4,7 +4,7 @@ import DS from 'ember-data';
 export default DS.RESTAdapter.extend({
   session: Ember.inject.service(),
 
-  host: 'http://localhost:3000',
+  host: 'http://jackflannery.blog',
 
   urlForRequest(params) {
     let url = this._super(params);

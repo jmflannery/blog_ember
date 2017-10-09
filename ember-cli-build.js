@@ -22,7 +22,6 @@ module.exports = function(defaults) {
 
   app.import('bower_components/highlightjs/highlight.pack.js');
   app.import('bower_components/highlightjs/styles/monokai.css');
-  app.import('bower_components/moment/moment.js');
 
   return app.toTree();
 };

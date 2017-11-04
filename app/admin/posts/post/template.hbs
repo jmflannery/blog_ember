@@ -1,8 +1,1 @@
-{{#link-to 'admin.posts.index'}}
-  All Posts
-{{/link-to}}
-{{#link-to 'admin.posts.edit' model}}
-  Edit
-{{/link-to}}
-<a href='#' {{action 'deletePost' model}}>Delete</a>
 {{#post-article post=model admin="true"}}{{/post-article}}

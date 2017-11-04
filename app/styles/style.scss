@@ -1,8 +1,18 @@
 body {
-  font-family: 'Anonymous Pro';
+  font-family: 'Roboto Mono';
   font-size: 16px;
   text-align: center;
-  margin: 12px 0px;
+}
+
+nav {
+  font-family: 'Shrikhand';
+  background-color: #048DC9;
+  a {
+    letter-spacing: 2px;
+  }
+  button {
+    font-family: 'Roboto Mono';
+  }
 }
 
 a {
@@ -10,6 +20,7 @@ a {
 }
 
 h1 {
+  font-family: 'Contrail One';
   font-size: 2rem;
   margin: 0 0 12px 0;
 }
@@ -48,6 +59,7 @@ textarea {
 button {
   border: 1px solid black;
   border-radius: 6px;
+  cursor: pointer;
 }
 
 article {
@@ -107,6 +119,17 @@ article {
   }
 }
 
+.post-side-menu {
+  display: none;
+}
+
+@media (min-width: 992px) {
+// @include media-breakpoint-up(lg) {
+  .post-side-menu {
+    display: block;
+  }
+}
+
 @media only screen and (min-width: 768px) {
 
   .feather {
@@ -124,8 +147,6 @@ article {
 @media only screen and (min-width: 1024px) {
 
   .page {
-    width: 68%;
-    margin: 0 auto;
   }
 
   .new-post, .edit-post {

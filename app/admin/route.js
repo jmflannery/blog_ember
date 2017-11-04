@@ -12,11 +12,5 @@ export default Ember.Route.extend({
     } else {
       this.transitionTo('posts');
     }
-  },
-
-  model() {
-    return Ember.RSVP.hash({
-      posts: this.store.findAll('post')
-    });
   }
 });

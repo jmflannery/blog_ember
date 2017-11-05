@@ -4,17 +4,6 @@ body {
   text-align: center;
 }
 
-nav {
-  font-family: 'Shrikhand';
-  background-color: #048DC9;
-  a {
-    letter-spacing: 2px;
-  }
-  button {
-    font-family: 'Roboto Mono';
-  }
-}
-
 a {
   text-decoration: none;
 }
@@ -51,12 +40,6 @@ button {
   font-family: 'fontello-icons';
 }
 
-.feather {
-  color: #278912;
-  margin: 8px;
-  display: block;
-}
-
 .input {
   margin: 12px 0;
 }
@@ -87,10 +70,6 @@ button {
 }
 
 @media only screen and (min-width: 768px) {
-
-  .feather {
-    display: inline;
-  }
 
   .new-post, .edit-post {
 

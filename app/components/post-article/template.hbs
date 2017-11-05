@@ -1,26 +1,28 @@
-<div class="post-header">
-  <h1>{{post.title}}</h1>
+<article class=post-article>
+  <header class="post-header">
+    <h1 class="title">{{post.title}}</h1>
 
-  {{#if admin}}
-    <div class='row'>
-      {{#link-to 'admin.posts.index'}}
-        All Posts
-      {{/link-to}}
-      {{#link-to 'admin.posts.edit' model}}
-        Edit
-      {{/link-to}}
-      <a href='#' {{action 'deletePost' model}}>Delete</a>
+    {{#if admin}}
+      <div class='row'>
+        {{#link-to 'admin.posts.index'}}
+          All Posts
+        {{/link-to}}
+        {{#link-to 'admin.posts.edit' model}}
+          Edit
+        {{/link-to}}
+        <a href='#' {{action 'deletePost' model}}>Delete</a>
+      </div>
+    {{/if}}
+
+    <div class='row article-info'>
+      <p>
+        <span>{{created_at_formatted}}</span>
+        <span class="icon feather">a</span>
+        <span>Jack Flannery</span>
+      </p>
     </div>
-  {{/if}}
-
-  <div class='row'>
-    <p class='text-center' style="width: 100%;">
-      <span>{{created_at_formatted}}</span>
-      <span class="icon feather">a</span>
-      <span>Jack Flannery</span>
-    </p>
+  </header>
+  <div class="post-content">
+    {{markdown-to-html post.content}}
   </div>
-</div>
-<div class="post-content">
-  {{markdown-to-html post.content}}
-</div>
+</article>

@@ -1,6 +1,7 @@
 {
   "name": "blog-ember",
   "dependencies": {
-    "ember-qunit-notifications": "0.1.0"
+    "ember-qunit-notifications": "0.1.0",
+    "highlightjs": "^9.12.0"
   }
 }

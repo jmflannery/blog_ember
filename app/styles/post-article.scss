@@ -1,3 +1,34 @@
 .post-article {
-  margin: 56px 0 0 0;
+  width: 94%;
+  margin: 0 auto;
+
+  .post-header {
+    text-align: center;
+    margin: 56px 0 0 0;
+
+    h1 {
+      font-family: 'Contrail One';
+      font-size: 2.5rem;
+      margin: 0 0 12px 0;
+    }
+
+    .article-info {
+      p {
+        width: 100%;
+        text-align: center;
+        font-family: 'Roboto Mono';
+      }
+    }
+  }
+
+  .post-content {
+    font-family: 'Roboto Mono';
+
+    h1, h2, h3, h4, h5, h6 {
+      margin: 6px 0 18px 0;
+    }
+    p {
+      margin: 16px 0;
+    }
+  }
 }

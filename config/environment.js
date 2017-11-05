@@ -1,10 +1,11 @@
 /* jshint node: true */
 
 module.exports = function(environment) {
-  var ENV = {
+  let ENV = {
     modulePrefix: 'blog-ember',
     environment: environment,
     rootURL: '/',
+    apiUrl: 'http://localhost:3000',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -40,7 +41,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.apiUrl = 'http://localhost:3000';
   }
 
   return ENV;

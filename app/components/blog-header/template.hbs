@@ -3,11 +3,27 @@
     <a href="#">jack's dev blog</a>
     <span class='header-icon'>{{fa-icon "map-signs"}}</span>
   </div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#blogNav" aria-controls="blogNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
-  {{#if isLoggedIn}}
-    <button {{action "logout"}} class="destroy">Logout</button>
-  {{/if}}
+  <div class="collapse navbar-collapse" id="blogNav">
+    <ul class="navbar-nav mr-auto">
+      {{#if isLoggedIn}}
+        <li class="nav-item">
+          {{#link-to 'admin.index' class='nav-link'}}
+            All Posts
+          {{/link-to}}
+        </li>
+        <li class="nav-item">
+          <a {{action "logout"}} class="nav-link" href="#">Logout</a>
+        </li>
+      {{else}}
+        <li class="nav-item">
+          {{#link-to 'index' class='nav-link'}}
+            All Posts
+          {{/link-to}}
+        </li>
+      {{/if}}
+    </ul>
+  </div>
 </nav>

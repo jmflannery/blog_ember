@@ -1,6 +1,13 @@
 .post-listing {
-  border-top: 1px solid black;
-  margin: 0px auto;
+  font-family: 'Roboto Mono';
+  border-bottom: 1px solid black;
   padding: 12px;
-  text-align: left;
+
+  a {
+    text-decoration: none;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
 }

@@ -1,10 +1,5 @@
-{{#link-to 'admin.posts.new' class="button"}}
-  New Post
-{{/link-to}}
 <div class='post-listings'>
   {{#each model.posts as |post|}}
     {{#post-listing post=post admin=model.isLoggedIn}}{{/post-listing}}
   {{/each}}
 </div>
-
-{{outlet}}

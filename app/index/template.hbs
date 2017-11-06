@@ -1,5 +1,5 @@
 <div class='post-listings'>
-  {{#each model as |post|}}
-    {{#post-listing model=post}}{{/post-listing}}
+  {{#each model.posts as |post|}}
+    {{#post-listing post=post admin=model.isLoggedIn}}{{/post-listing}}
   {{/each}}
 </div>

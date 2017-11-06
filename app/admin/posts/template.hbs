@@ -2,7 +2,7 @@
   <div class='post-side-menu col-lg-3'>
     <div class='post-listings'>
       {{#each model.posts as |post|}}
-        {{#post-listing post=post}}{{/post-listing}}
+        {{#post-listing post=post admin=model.isLoggedIn}}{{/post-listing}}
       {{/each}}
     </div>
   </div>

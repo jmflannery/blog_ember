@@ -1,12 +1,12 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
 
-export default Ember.Route.extend({
+export default Route.extend({
   session: Ember.inject.service(),
 
   model() {
-    return Ember.RSVP.hash({
+    return {
       isLoggedIn: this.get('session').isLoggedIn(),
       posts: this.store.findAll('post')
-    });
+    }
   }
 });

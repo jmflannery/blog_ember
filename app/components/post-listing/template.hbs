@@ -1,20 +1,24 @@
 <div class="post-listing">
   {{#if admin}}
-    {{#link-to 'admin.posts.post' post}}
-      <h2>{{post.title}}</h2>
+    {{#link-to 'admin.posts.post' post class='menu-link'}}
+      <div class="menu-item">
+        <h2>{{post.title}}</h2>
+        {{#link-to 'admin.posts.edit' post}}
+          {{fa-icon "pencil-square-o"}}
+        {{/link-to}}
+        <a href='#' {{action 'deletePost' post}}>{{fa-icon "trash"}}</a>
+        {{#if post.published_at}}
+          <a href='#' {{action 'unpublishPost' post}}>{{fa-icon "eye"}}</a>
+        {{else}}
+          <a href='#' {{action 'publishPost' post}}>{{fa-icon "eye-slash"}}</a>
+        {{/if}}
+      </div>
     {{/link-to}}
-    {{#link-to 'admin.posts.edit' post}}
-      Edit
-    {{/link-to}} |
-    <a href='#' {{action 'deletePost' post}}>Delete</a> |
-    {{#if post.published_at}}
-      <a href='#' {{action 'unpublishPost' post}}>Unpublish</a>
-    {{else}}
-      <a href='#' {{action 'publishPost' post}}>Publish</a>
-    {{/if}}
   {{else}}
-    {{#link-to 'posts.post' post}}
-      <h2>{{post.title}}</h2>
+    {{#link-to 'posts.post' post class='menu-link'}}
+      <div class="menu-item">
+        <h2>{{post.title}}</h2>
+      </div>
     {{/link-to}}
   {{/if}}
 </div>

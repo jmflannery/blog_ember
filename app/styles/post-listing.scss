@@ -1,13 +1,45 @@
-.post-listing {
-  font-family: 'Roboto Mono';
-  border-bottom: 1px solid black;
-  padding: 12px;
+.post-listings {
 
-  a {
-    text-decoration: none;
-  }
+  .post-listing {
+    font-family: 'Roboto Mono';
+    border-bottom: 1px solid #8a8a8a;
+    border-right: 1px solid #8a8a8a;
 
-  h2 {
-    font-size: 1.1rem;
+    a.menu-link {
+
+      .menu-item {
+        color: #8a8a8a;
+        padding: 14px;
+
+        h2 {
+          font-size: 1.1rem;
+          margin: 0;
+        }
+      }
+
+      a {
+        color: #8a8a8a;
+      }
+
+      &:hover {
+        text-decoration: none;
+
+        .menu-item {
+          text-decoration: none;
+          color: white;
+          background-color: #8a8a8a;
+
+          a {
+            text-decoration: none;
+            color: white;
+
+            &:hover {
+              color: #048DC9;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
   }
 }

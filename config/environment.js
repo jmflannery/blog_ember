@@ -41,7 +41,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.apiUrl = 'http://localhost:3000';
+    ENV.apiUrl = 'http://jackflannery.blog';
   }
 
   return ENV;

@@ -41,7 +41,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.apiUrl = 'http://jackflannery.blog';
+    ENV.apiUrl = 'http://jackflannery.blog/api';
   }
 
   return ENV;

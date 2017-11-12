@@ -1,10 +1,11 @@
 import Ember from 'ember';
 import DS from 'ember-data';
+import ENV from '../config/environment';
 
 export default DS.RESTAdapter.extend({
   session: Ember.inject.service(),
 
-  host: 'http://jackflannery.blog',
+  host: ENV.apiUrl,
 
   urlForRequest(params) {
     let url = this._super(params);

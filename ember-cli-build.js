@@ -21,7 +21,8 @@ module.exports = function(defaults) {
   // along with the exports of each module as its value.
 
   app.import('bower_components/highlightjs/highlight.pack.js');
-  app.import('bower_components/highlightjs/styles/monokai.css');
+  app.import('bower_components/highlightjs/styles/monokai-sublime.css');
+  app.import('bower_components/font-awesome/scss/font-awesome.scss');
 
   return app.toTree();
 };

@@ -1,0 +1,9 @@
+{{#link-to 'admin.posts.edit' post bubbles=false}}
+  {{fa-icon "pencil-square-o"}}
+{{/link-to}}
+<a href='#' {{action 'deletePost' post bubbles=false}}>{{fa-icon "trash"}}</a>
+{{#if post.published_at}}
+  <a href='#' {{action 'unpublishPost' post bubbles=false}}>{{fa-icon "eye"}}</a>
+{{else}}
+  <a href='#' {{action 'publishPost' post bubbles=false}}>{{fa-icon "eye-slash"}}</a>
+{{/if}}

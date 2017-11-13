@@ -3,15 +3,7 @@
     {{#link-to 'admin.posts.post' post class='menu-link'}}
       <div class="menu-item">
         <h2>{{post.title}}</h2>
-        {{#link-to 'admin.posts.edit' post}}
-          {{fa-icon "pencil-square-o"}}
-        {{/link-to}}
-        <a href='#' {{action 'deletePost' post}}>{{fa-icon "trash"}}</a>
-        {{#if post.published_at}}
-          <a href='#' {{action 'unpublishPost' post}}>{{fa-icon "eye"}}</a>
-        {{else}}
-          <a href='#' {{action 'publishPost' post}}>{{fa-icon "eye-slash"}}</a>
-        {{/if}}
+        {{#post-controls post=post}}{{/post-controls}}
       </div>
     {{/link-to}}
   {{else}}

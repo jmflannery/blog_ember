@@ -3,16 +3,7 @@
     <h1 class="title">{{post.title}}</h1>
 
     {{#if admin}}
-      <div class='row' class="admin-controls">
-        {{#link-to 'admin.posts.edit' post}}
-          <span>
-            {{fa-icon "pencil-square-o"}}
-          </span>
-        {{/link-to}}
-        <a href='#' {{action 'deletePost' post}}>
-          {{fa-icon "trash"}}
-        </a>
-      </div>
+      {{#post-controls post=post}}{{/post-controls}}
     {{/if}}
 
     <div class='row article-info'>

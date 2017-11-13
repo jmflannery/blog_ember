@@ -6,7 +6,7 @@
     font-family: 'Shrikhand';
 
     a {
-      font-size: 1.4rem;
+      font-size: 1rem;
       letter-spacing: 2px;
       color: #048DC9;
       text-decoration: none;
@@ -14,14 +14,38 @@
 
     span.header-icon-before {
       color: #048DC9;
-      font-size: 1.6rem;
-      margin: 0 12px;
+      font-size: 1rem;
+      margin: 0 8px 0 0;
     }
 
     span.header-icon-after {
       color: #00AE07;
-      font-size: 1.8rem;
-      margin: 0 18px;
+      font-size: 1rem;
+      margin: 0 0 0 12px;
+    }
+
+    @media (min-width: 768px) {
+      a {
+        font-size: 1.4rem;
+      }
+      span.header-icon-before {
+        font-size: 1.4rem;
+      }
+      span.header-icon-after {
+        font-size: 1.4rem;
+      }
+    }
+
+    @media (min-width: 992px) {
+      a {
+        font-size: 1.8rem;
+      }
+      span.header-icon-before {
+        font-size: 1.8rem;
+      }
+      span.header-icon-after {
+        font-size: 1.8rem;
+      }
     }
   }
 

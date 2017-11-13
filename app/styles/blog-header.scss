@@ -1,23 +1,38 @@
 .navbar {
-  background-color: #048DC9;
+  background-color: white;
+  margin-bottom: 32px;
 
   .navbar-brand {
     font-family: 'Shrikhand';
 
     a {
+      font-size: 1.4rem;
       letter-spacing: 2px;
-      color: white;
-      margin-right: 18px;
+      color: #048DC9;
       text-decoration: none;
     }
 
-    .header-icon {
-      color: white;
+    span.header-icon-before {
+      color: #048DC9;
       font-size: 1.6rem;
+      margin: 0 12px;
+    }
+
+    span.header-icon-after {
+      color: #00AE07;
+      font-size: 1.8rem;
+      margin: 0 18px;
     }
   }
 
-  button {
-    font-family: 'Roboto Mono';
+  .blog-nav {
+    li.nav-item {
+      a.nav-link {
+        color: #8a8a8a;
+        &:hover {
+          color: #048DC9;
+        }
+      }
+    }
   }
 }

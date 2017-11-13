@@ -1,12 +1,13 @@
-<nav class="navbar navbar-expand-lg navbar-dark">
+<nav class="navbar navbar-expand-lg navbar-light">
   <div class="navbar-brand">
+    <span class='header-icon-before'>{{fa-icon "terminal"}}</span>
     <a href="#">jack's dev blog</a>
-    <span class='header-icon'>{{fa-icon "map-signs"}}</span>
+    <span class='header-icon-after'>{{fa-icon "map-signs"}}</span>
   </div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#blogNav" aria-controls="blogNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="blogNav">
+  <div class="blog-nav collapse navbar-collapse" id="blogNav">
     <ul class="navbar-nav mr-auto">
       {{#if isLoggedIn}}
         <li class="nav-item">

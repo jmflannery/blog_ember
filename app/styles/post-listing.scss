@@ -2,17 +2,17 @@
 
   .post-listing {
     font-family: 'Roboto Mono';
-    border-bottom: 1px solid #8a8a8a;
-    border-right: 1px solid #8a8a8a;
+    border-bottom: 1px solid white;
 
     a.menu-link {
 
       .menu-item {
         color: #8a8a8a;
         padding: 14px;
+        background-color: #e6e6e6;
 
         h2 {
-          font-size: 1.1rem;
+          font-size: 1rem;
           margin: 0;
         }
       }

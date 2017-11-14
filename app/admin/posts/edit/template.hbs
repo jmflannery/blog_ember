@@ -5,7 +5,7 @@
   </div>
   <div class="input">
     <label>content:</label>
-    {{textarea value=model.content placeholder="Article markdown goes here..." rows="600" cols="1000" wrap="off"}}
+    {{textarea value=model.content placeholder="Article markdown goes here..." wrap="on"}}
   </div>
   <button {{action 'save' model}}>Save</button>
   <button {{action 'cancel' model}}>Cancel</button>

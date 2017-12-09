@@ -1,7 +1,9 @@
 <div class="new-post">
   <div class="input">
     <label>title:</label>
-    {{input value=title placeholder="title here..."}}
+    {{input value=title placeholder="title here..." key-up='slugUpdated'}}
+    <label>slug:</label>
+    {{input value=slug placeholder="slug here..."}}
   </div>
   <div class="input">
     <label>content:</label>

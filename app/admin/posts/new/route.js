@@ -6,7 +6,8 @@ export default Ember.Route.extend({
       console.log('Add post');
       var post = this.store.createRecord('post', {
         title: this.controller.get('title'),
-        content: this.controller.get('content')
+        content: this.controller.get('content'),
+        slug: this.controller.get('slug')
       });
       post.save().then(() => {
         console.log('Post created successfully');
@@ -15,6 +16,11 @@ export default Ember.Route.extend({
         console.log('Failed to create post');
         console.log(arguments);
       });
+    },
+
+    slugUpdated: function(input) {
+      let slug = input.split(' ').map(s => s.toLowerCase()).join('-');
+      this.controller.set('slug', slug);
     }
   }
 });

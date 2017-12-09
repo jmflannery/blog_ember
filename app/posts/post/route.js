@@ -2,6 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(params) {
-    return this.get('store').findRecord('post', params.post_id);
+    return this.store.queryRecord('post', {
+      filter: {
+        slug: params.slug
+      }
+    });
   }
 });

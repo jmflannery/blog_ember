@@ -9,12 +9,12 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('login');
   this.route('posts', function() {
-    this.route('post', { path: ':post_id' });
+    this.route('post', { path: ':slug' });
   });
   this.route('admin', function() {
     this.route('posts', function() {
       this.route('new');
-      this.route('post', { path: ':post_id' });
+      this.route('post', { path: ':slug' });
       this.route('edit', { path: ':post_id/edit' });
     });
   });

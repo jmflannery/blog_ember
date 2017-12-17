@@ -44,16 +44,6 @@ button {
   margin: 12px 0;
 }
 
-.new-post, .edit-post {
-  width: 92%;
-  margin: 0 auto;
-  text-align: left;
-
-  textarea {
-    height: 200px;
-  }
-}
-
 .post-side-menu {
   display: none;
 }
@@ -66,26 +56,9 @@ button {
 }
 
 @media only screen and (min-width: 768px) {
-
-  .new-post, .edit-post {
-
-    textarea {
-      height: 400px;
-    }
-  }
 }
 
 @media only screen and (min-width: 1024px) {
-
-  .page {
-  }
-
-  .new-post, .edit-post {
-
-    textarea {
-      height: 460px;
-    }
-  }
 }
 
 @media only screen and (min-width: 1197px) {

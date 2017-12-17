@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 
 export default Component.extend({
-  className: 'post-form',
+  classNames: ['post-form'],
 
   actions: {
     save: function(post) {

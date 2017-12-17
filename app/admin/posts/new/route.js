@@ -1,17 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  model: function() {
+    return this.store.createRecord('post', {});
+  },
+
   actions: {
-    addPost: function() {
-      console.log('Add post');
-      var post = this.store.createRecord('post', {
-        title: this.controller.get('title'),
-        content: this.controller.get('content'),
-        slug: this.controller.get('slug')
-      });
-      post.save().then(() => {
+    addPost: function(post) {
+      post.save().then((post) => {
         console.log('Post created successfully');
-        this.transitionTo('admin.posts');
+        this.transitionTo('admin.posts.post', post);
       }, () => {
         console.log('Failed to create post');
         console.log(arguments);
@@ -20,7 +18,7 @@ export default Ember.Route.extend({
 
     slugUpdated: function(input) {
       let slug = input.split(' ').map(s => s.toLowerCase()).join('-');
-      this.controller.set('slug', slug);
+      this.controller.get('model').set('slug', slug);
     }
   }
 });

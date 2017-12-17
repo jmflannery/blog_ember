@@ -1,13 +1,13 @@
 <div class="new-post">
   <div class="input">
     <label>title:</label>
-    {{input value=title placeholder="title here..." key-up='slugUpdated'}}
+    {{input value=model.title placeholder="title here..." key-up='slugUpdated'}}
     <label>slug:</label>
-    {{input value=slug placeholder="slug here..."}}
+    {{input value=model.slug placeholder="slug here..."}}
   </div>
   <div class="input">
     <label>content:</label>
-    {{textarea value=content placeholder="Article markdown goes here..." wrap="on"}}
+    {{textarea value=model.content placeholder="Article markdown goes here..." wrap="on"}}
   </div>
-  <button {{action 'addPost'}}>Add Post</button>
+  <button {{action 'addPost' model}}>Add Post</button>
 </div>

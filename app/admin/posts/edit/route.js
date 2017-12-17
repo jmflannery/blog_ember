@@ -6,15 +6,12 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    save: function(post) {
-      post.save().then(() => {
-        this.transitionTo('admin.posts');
-      });
+    saved: function(post) {
+      this.transitionTo('admin.posts.post', post);
     },
 
     cancel: function(post) {
-      post.rollbackAttributes();
-      this.transitionTo('admin.posts');
+      this.transitionTo('admin.posts.post', post);
     }
   }
 });

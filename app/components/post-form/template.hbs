@@ -1,0 +1,12 @@
+<div class="input">
+  <label>title:</label>
+  {{input value=post.title placeholder="title here..." key-up='slugUpdated'}}
+  <label>slug:</label>
+  {{input value=post.slug placeholder="slug here..."}}
+</div>
+<div class="input">
+  <label>content:</label>
+  {{textarea value=post.content placeholder="Article markdown goes here..." wrap="on"}}
+</div>
+<button {{action 'save' post}}>Save</button>
+<button {{action 'cancel' post}}>Cancel</button>

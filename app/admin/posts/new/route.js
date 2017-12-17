@@ -6,19 +6,12 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    addPost: function(post) {
-      post.save().then((post) => {
-        console.log('Post created successfully');
-        this.transitionTo('admin.posts.post', post);
-      }, () => {
-        console.log('Failed to create post');
-        console.log(arguments);
-      });
+    saved: function(post) {
+      this.transitionTo('admin.posts.post', post);
     },
 
-    slugUpdated: function(input) {
-      let slug = input.split(' ').map(s => s.toLowerCase()).join('-');
-      this.controller.get('model').set('slug', slug);
+    cancel: function(post) {
+      this.transitionTo('admin.posts.post', post);
     }
   }
 });

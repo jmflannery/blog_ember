@@ -1,14 +1,1 @@
-<div class="edit-post">
-  <div class="input">
-    <label>title:</label>
-    {{input value=model.title placeholder="title here..."}}
-    <label>slug:</label>
-    {{input value=model.slug placeholder="slug here..."}}
-  </div>
-  <div class="input">
-    <label>content:</label>
-    {{textarea value=model.content placeholder="Article markdown goes here..." wrap="on"}}
-  </div>
-  <button {{action 'save' model}}>Save</button>
-  <button {{action 'cancel' model}}>Cancel</button>
-</div>
+{{#post-form post=model saved="saved" cancel="cancel"}}{{/post-form}}
